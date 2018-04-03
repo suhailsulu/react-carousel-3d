@@ -19,6 +19,7 @@
     "name": "Suhail C",
     "email": "mr.suhailsulu@gmail.com"
   },
+  "repository": "github:suhailsulu/react-3d-carousal",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
