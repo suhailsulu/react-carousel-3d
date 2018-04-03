@@ -1,6 +1,6 @@
 {
   "name": "react-3d-carousal",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "3D carousal in react",
   "main": "build/index.js",
   "peerDependencies": {
