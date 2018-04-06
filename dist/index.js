@@ -1,5 +1,14 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("react"));
+	else if(typeof define === 'function' && define.amd)
+		define("react-3d-carousal", ["React"], factory);
+	else if(typeof exports === 'object')
+		exports["react-3d-carousal"] = factory(require("react"));
+	else
+		root["react-3d-carousal"] = factory(root["React"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_7__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -61,7 +70,7 @@ module.exports =
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 8);
@@ -536,7 +545,7 @@ if(false) {
 /* 7 */
 /***/ (function(module, exports) {
 
-module.exports = require("react");
+module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
 
 /***/ }),
 /* 8 */
@@ -2126,3 +2135,4 @@ module.exports = function (css) {
 
 /***/ })
 /******/ ]);
+});

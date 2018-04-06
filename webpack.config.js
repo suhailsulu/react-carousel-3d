@@ -1,6 +1,11 @@
-var path = require('path');
+const webpack = require('webpack');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const pkg = require('./package.json');
+const path = require('path');
+const libraryName= pkg.name;
+
 module.exports = {
-  entry: './src/index.js',
+  entry: path.join(__dirname, "./src/index.js"),
   output: {
     path: path.join(__dirname, './dist'),      
     filename: 'index.js',      
