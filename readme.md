@@ -1,6 +1,8 @@
 #React 3D Carousal component
 3D carousal component in react.
 
+### Demo 
+![Demo](https://i.imgur.com/aa2QTOx.gif)
 ##Installation
 ####npm 
 
@@ -38,3 +40,4 @@ let slides = [
 ###props 
 <b>slides :-</b> Array of react components
 you can give any component in the slides like images, divs or even your custom components
+
