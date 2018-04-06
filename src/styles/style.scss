@@ -111,7 +111,7 @@ body {
           display: none;
           z-index: 3;
           right: 101%;
-          margin-right: -2px;
+          margin-right: 5px;
           padding: 20px 15px;
           height: 100%;
           cursor: pointer;
@@ -122,7 +122,7 @@ body {
             margin-top:-20px;
             color: #ffffff;
             transform: translateY(-50%);
-            padding: 20px 15px;
+            padding: 10px 10px;
             border-top: 2px solid #fdc84b;
             border-right: 2px solid #fdc84b;
             border-bottom: 2px solid #fdc84b;
@@ -133,9 +133,9 @@ body {
           display: none;
           position: absolute;
           z-index: 3;
-          left: 101%;
+          left: 100%;
           padding: 20px 15px;
-          height: 100%;
+          height: 101%;
           cursor: pointer;
           div {
             position: absolute;
@@ -144,7 +144,7 @@ body {
             margin-top:-20px;
             color: #ffffff;
             transform: translateY(-50%);
-            padding: 20px 15px;
+            padding: 10px 10px;
             border-top: 2px solid #fdc84b;
             border-right: 2px solid #fdc84b;
             border-bottom: 2px solid #fdc84b;
