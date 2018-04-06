@@ -10,11 +10,11 @@ jsfiddle (https://jsfiddle.net/suhailsulu/8hnqaz2c/)
 ####npm 
 
 ```
- npm i react-carousel-3d
+ npm i 3d-react-carousal
 ```
 ####yarn
 ```
- yarn add react-carousel-3d
+ yarn add 3d-react-carousal
 ```
 ##### Add fa-css in public.html for arrows
 
@@ -24,9 +24,9 @@ jsfiddle (https://jsfiddle.net/suhailsulu/8hnqaz2c/)
 
 #####Importing the component
 ```shell
-import {Carousel} from 'react-carousel-3d';
+import {Carousel} from '3d-react-carousal';
 or 
-var Carousel = require( 'react-carousel-3d').Carousel;
+var Carousel = require( '3d-react-carousal').Carousel;
 .
 .
 .

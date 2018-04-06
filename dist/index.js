@@ -557,7 +557,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Carousal = undefined;
+exports.Carousel = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -579,13 +579,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Carousal = exports.Carousal = function (_React$Component) {
-    _inherits(Carousal, _React$Component);
+var Carousel = exports.Carousel = function (_React$Component) {
+    _inherits(Carousel, _React$Component);
 
-    function Carousal(props) {
-        _classCallCheck(this, Carousal);
+    function Carousel(props) {
+        _classCallCheck(this, Carousel);
 
-        var _this = _possibleConstructorReturn(this, (Carousal.__proto__ || Object.getPrototypeOf(Carousal)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, props));
 
         _this.state = {
             slideTotal: 0,
@@ -596,7 +596,7 @@ var Carousal = exports.Carousal = function (_React$Component) {
         return _this;
     }
 
-    _createClass(Carousal, [{
+    _createClass(Carousel, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
             var _this2 = this;
@@ -731,7 +731,7 @@ var Carousal = exports.Carousal = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'react-3d-carousal', style: { height: this.state.height } },
+                { className: 'react-3d-carousel', style: { height: this.state.height } },
                 this.state.slides && this.state.slides.length > 0 && _react2.default.createElement(
                     'div',
                     { className: 'slider-container' },
@@ -773,10 +773,10 @@ var Carousal = exports.Carousal = function (_React$Component) {
         }
     }]);
 
-    return Carousal;
+    return Carousel;
 }(_react2.default.Component);
 
-Carousal.propTypes = {
+Carousel.propTypes = {
     slides: _propTypes2.default.arrayOf(_propTypes2.default.element)
 };
 
@@ -789,7 +789,7 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, "@keyframes heartbeat {\n  0% {\n    transform: scale(0); }\n  25% {\n    transform: scale(1.2); }\n  50% {\n    transform: scale(1); }\n  75% {\n    transform: scale(1.2); }\n  100% {\n    transform: scale(1); } }\n\nbody {\n  color: #FFFFFF;\n  background-color: #27292d; }\n\n.react-3d-carousal {\n  position: relative; }\n  .react-3d-carousal .slider-container {\n    position: absolute;\n    left: 50%;\n    top: 0%;\n    width: 90%;\n    margin: -0px auto 0px -45%; }\n    .react-3d-carousal .slider-container .slider-content {\n      position: relative;\n      left: 50%;\n      top: 0%;\n      width: 70%;\n      height: 80%;\n      transform: translateX(-50%); }\n      .react-3d-carousal .slider-container .slider-content .slider-single {\n        position: absolute;\n        z-index: 0;\n        left: 0;\n        top: 0;\n        width: 100%;\n        transition: z-index 0ms 250ms; }\n        .react-3d-carousal .slider-container .slider-content .slider-single .slider-single-content {\n          position: relative;\n          left: 0;\n          top: 0;\n          width: 100%;\n          box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);\n          transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);\n          transform: scale(0);\n          opacity: 0; }\n          .react-3d-carousal .slider-container .slider-content .slider-single .slider-single-content img {\n            max-width: 100%; }\n        .react-3d-carousal .slider-container .slider-content .slider-single.preactivede .slider-single-content {\n          transform: translateX(-50%) scale(0); }\n        .react-3d-carousal .slider-container .slider-content .slider-single.preactive {\n          z-index: 1; }\n          .react-3d-carousal .slider-container .slider-content .slider-single.preactive .slider-single-content {\n            opacity: .3;\n            transform: translateX(-25%) scale(0.8); }\n        .react-3d-carousal .slider-container .slider-content .slider-single.proactive {\n          z-index: 1; }\n          .react-3d-carousal .slider-container .slider-content .slider-single.proactive .slider-single-content {\n            opacity: .3;\n            transform: translateX(25%) scale(0.8); }\n        .react-3d-carousal .slider-container .slider-content .slider-single.proactivede .slider-single-content {\n          transform: translateX(50%) scale(0); }\n        .react-3d-carousal .slider-container .slider-content .slider-single.active {\n          z-index: 2; }\n          .react-3d-carousal .slider-container .slider-content .slider-single.active .slider-left, .react-3d-carousal .slider-container .slider-content .slider-single.active .slider-right {\n            display: block; }\n          .react-3d-carousal .slider-container .slider-content .slider-single.active .slider-single-content {\n            opacity: 1;\n            transform: translateX(0%) scale(1); }\n    .react-3d-carousal .slider-container .slider-left {\n      position: absolute;\n      display: none;\n      z-index: 3;\n      right: 101%;\n      margin-right: 5px;\n      padding: 20px 15px;\n      height: 100%;\n      cursor: pointer; }\n      .react-3d-carousal .slider-container .slider-left div {\n        position: absolute;\n        top: 50%;\n        left: 0%;\n        margin-top: -20px;\n        color: #ffffff;\n        transform: translateY(-50%);\n        padding: 10px 10px;\n        border-top: 2px solid #fdc84b;\n        border-right: 2px solid #fdc84b;\n        border-bottom: 2px solid #fdc84b;\n        border-left: 2px solid #fdc84b; }\n    .react-3d-carousal .slider-container .slider-right {\n      display: none;\n      position: absolute;\n      z-index: 3;\n      left: 101%;\n      padding: 20px 15px;\n      height: 101%;\n      cursor: pointer;\n      margin-left: -2px; }\n      .react-3d-carousal .slider-container .slider-right div {\n        position: absolute;\n        top: 50%;\n        left: 0%;\n        margin-top: -20px;\n        color: #ffffff;\n        transform: translateY(-50%);\n        padding: 10px 10px;\n        border-top: 2px solid #fdc84b;\n        border-right: 2px solid #fdc84b;\n        border-bottom: 2px solid #fdc84b;\n        border-left: 2px solid #fdc84b; }\n", ""]);
+exports.push([module.i, "@keyframes heartbeat {\n  0% {\n    transform: scale(0); }\n  25% {\n    transform: scale(1.2); }\n  50% {\n    transform: scale(1); }\n  75% {\n    transform: scale(1.2); }\n  100% {\n    transform: scale(1); } }\n\nbody {\n  color: #FFFFFF;\n  background-color: #27292d; }\n\n.react-3d-carousel {\n  position: relative; }\n  .react-3d-carousel .slider-container {\n    position: absolute;\n    left: 50%;\n    top: 0%;\n    width: 90%;\n    margin: -0px auto 0px -45%; }\n    .react-3d-carousel .slider-container .slider-content {\n      position: relative;\n      left: 50%;\n      top: 0%;\n      width: 70%;\n      height: 80%;\n      transform: translateX(-50%); }\n      .react-3d-carousel .slider-container .slider-content .slider-single {\n        position: absolute;\n        z-index: 0;\n        left: 0;\n        top: 0;\n        width: 100%;\n        transition: z-index 0ms 250ms; }\n        .react-3d-carousel .slider-container .slider-content .slider-single .slider-single-content {\n          position: relative;\n          left: 0;\n          top: 0;\n          width: 100%;\n          box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);\n          transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);\n          transform: scale(0);\n          opacity: 0; }\n          .react-3d-carousel .slider-container .slider-content .slider-single .slider-single-content img {\n            max-width: 100%; }\n        .react-3d-carousel .slider-container .slider-content .slider-single.preactivede .slider-single-content {\n          transform: translateX(-50%) scale(0); }\n        .react-3d-carousel .slider-container .slider-content .slider-single.preactive {\n          z-index: 1; }\n          .react-3d-carousel .slider-container .slider-content .slider-single.preactive .slider-single-content {\n            opacity: .3;\n            transform: translateX(-25%) scale(0.8); }\n        .react-3d-carousel .slider-container .slider-content .slider-single.proactive {\n          z-index: 1; }\n          .react-3d-carousel .slider-container .slider-content .slider-single.proactive .slider-single-content {\n            opacity: .3;\n            transform: translateX(25%) scale(0.8); }\n        .react-3d-carousel .slider-container .slider-content .slider-single.proactivede .slider-single-content {\n          transform: translateX(50%) scale(0); }\n        .react-3d-carousel .slider-container .slider-content .slider-single.active {\n          z-index: 2; }\n          .react-3d-carousel .slider-container .slider-content .slider-single.active .slider-left, .react-3d-carousel .slider-container .slider-content .slider-single.active .slider-right {\n            display: block; }\n          .react-3d-carousel .slider-container .slider-content .slider-single.active .slider-single-content {\n            opacity: 1;\n            transform: translateX(0%) scale(1); }\n    .react-3d-carousel .slider-container .slider-left {\n      position: absolute;\n      display: none;\n      z-index: 3;\n      right: 101%;\n      margin-right: 5px;\n      padding: 20px 15px;\n      height: 100%;\n      cursor: pointer; }\n      .react-3d-carousel .slider-container .slider-left div {\n        position: absolute;\n        top: 50%;\n        left: 0%;\n        margin-top: -20px;\n        color: #ffffff;\n        transform: translateY(-50%);\n        padding: 10px 10px;\n        border-top: 2px solid #fdc84b;\n        border-right: 2px solid #fdc84b;\n        border-bottom: 2px solid #fdc84b;\n        border-left: 2px solid #fdc84b; }\n    .react-3d-carousel .slider-container .slider-right {\n      display: none;\n      position: absolute;\n      z-index: 3;\n      left: 101%;\n      padding: 20px 15px;\n      height: 101%;\n      cursor: pointer;\n      margin-left: -2px; }\n      .react-3d-carousel .slider-container .slider-right div {\n        position: absolute;\n        top: 50%;\n        left: 0%;\n        margin-top: -20px;\n        color: #ffffff;\n        transform: translateY(-50%);\n        padding: 10px 10px;\n        border-top: 2px solid #fdc84b;\n        border-right: 2px solid #fdc84b;\n        border-bottom: 2px solid #fdc84b;\n        border-left: 2px solid #fdc84b; }\n", ""]);
 
 // exports
 
