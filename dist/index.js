@@ -557,6 +557,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.Carousal = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -578,7 +579,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Carousal = function (_React$Component) {
+var Carousal = exports.Carousal = function (_React$Component) {
     _inherits(Carousal, _React$Component);
 
     function Carousal(props) {
@@ -774,8 +775,6 @@ var Carousal = function (_React$Component) {
 
     return Carousal;
 }(_react2.default.Component);
-
-exports.default = Carousal;
 
 Carousal.propTypes = {
     slides: _propTypes2.default.arrayOf(_propTypes2.default.element)
