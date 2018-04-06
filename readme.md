@@ -1,5 +1,5 @@
-#React 3D Carousal component
-3D carousal component in react.
+#React 3D Carousel component
+3D carousel component in react.
 
 ### Demo 
 ![Demo](https://i.imgur.com/aa2QTOx.gif)
@@ -10,11 +10,11 @@ jsfiddle (https://jsfiddle.net/suhailsulu/8hnqaz2c/)
 ####npm 
 
 ```
- npm i react-3d-carousal
+ npm i react-carousel-3d
 ```
 ####yarn
 ```
- yarn add react-3d-carousal
+ yarn add react-carousel-3d
 ```
 ##### Add fa-css in public.html for arrows
 
@@ -24,9 +24,9 @@ jsfiddle (https://jsfiddle.net/suhailsulu/8hnqaz2c/)
 
 #####Importing the component
 ```shell
-import {Carousal} from 'react-3d-carousal';
+import {Carousel} from 'react-carousel-3d';
 or 
-var Carousal = require( 'react-3d-carousal').Carousal;
+var Carousel = require( 'react-carousel-3d').Carousel;
 .
 .
 .
@@ -39,7 +39,7 @@ let slides = [
 .
 .
 .
-<Carousal slides={slides}/>
+<Carousel slides={slides}/>
 
 ```
 ###props 
