@@ -24,7 +24,7 @@ jsfiddle (https://jsfiddle.net/suhailsulu/8hnqaz2c/)
 
 #####Importing the component
 ```shell
-import Carousal from 'react-3d-carousal';
+import {Carousal} from 'react-3d-carousal';
 .
 .
 .
