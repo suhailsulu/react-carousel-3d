@@ -25,6 +25,8 @@ jsfiddle (https://jsfiddle.net/suhailsulu/8hnqaz2c/)
 #####Importing the component
 ```shell
 import {Carousal} from 'react-3d-carousal';
+or 
+var Carousal = require( 'react-3d-carousal').Carousal;
 .
 .
 .
