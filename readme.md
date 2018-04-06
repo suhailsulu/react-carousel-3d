@@ -3,6 +3,9 @@
 
 ### Demo 
 ![Demo](https://i.imgur.com/aa2QTOx.gif)
+
+jsfiddle (https://jsfiddle.net/suhailsulu/8hnqaz2c/) 
+
 ##Installation
 ####npm 
 
