@@ -1,7 +1,7 @@
 {
-  "name": "react-3d-carousal",
-  "version": "1.0.3",
-  "description": "3D carousal in react",
+  "name": "react-carousel-3d",
+  "version": "1.0.0",
+  "description": "3D carousel in react",
   "main": "dist/index.js",
   "peerDependencies": {
     "react": "^15.5.4",
@@ -20,7 +20,7 @@
     "name": "Suhail C",
     "email": "mr.suhailsulu@gmail.com"
   },
-  "repository": "github:suhailsulu/react-3d-carousal",
+  "repository": "github:suhailsulu/react-carousel-3d",
   "devDependencies": {
     "react": ">=15.0.1",
     "react-dom": ">=15.0.1",

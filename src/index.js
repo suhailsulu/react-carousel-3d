@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles/style.scss'; 
 
-export class Carousal extends React.Component {
+export class Carousel extends React.Component {
     
     constructor(props) {
         super(props)
@@ -127,7 +127,7 @@ export class Carousal extends React.Component {
 
     render() {
         return (
-        <div className="react-3d-carousal" style={{height:this.state.height}}>
+        <div className="react-3d-carousel" style={{height:this.state.height}}>
             {this.state.slides && this.state.slides.length > 0 &&
                 <div className="slider-container">
                 
@@ -161,6 +161,6 @@ export class Carousal extends React.Component {
         );
     }
 }
-Carousal.propTypes = {
+Carousel.propTypes = {
     slides: PropTypes.arrayOf(PropTypes.element)
 };
