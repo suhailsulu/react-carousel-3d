@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles/style.scss'; 
 
-export default class Carousal extends React.Component {
+export class Carousal extends React.Component {
     
     constructor(props) {
         super(props)
