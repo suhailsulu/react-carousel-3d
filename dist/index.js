@@ -2,11 +2,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
 	else if(typeof define === 'function' && define.amd)
-		define("react-3d-carousal", ["React"], factory);
+		define("Carousal", ["React"], factory);
 	else if(typeof exports === 'object')
-		exports["react-3d-carousal"] = factory(require("react"));
+		exports["Carousal"] = factory(require("react"));
 	else
-		root["react-3d-carousal"] = factory(root["React"]);
+		root["Carousal"] = factory(root["React"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_7__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache

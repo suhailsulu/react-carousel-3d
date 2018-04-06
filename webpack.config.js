@@ -2,7 +2,7 @@ const webpack = require('webpack');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const pkg = require('./package.json');
 const path = require('path');
-const libraryName= pkg.name;
+const libraryName= "Carousal";
 
 module.exports = {
   entry: path.join(__dirname, "./src/index.js"),
