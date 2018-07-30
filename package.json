@@ -8,6 +8,7 @@
     "react-dom": ">=15.0.1"
   },
   "dependencies": {
+    "react-fast-compare": "^2.0.1",
     "webpack": "^2.6.1"
   },
   "scripts": {
