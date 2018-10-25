@@ -1,4 +1,4 @@
-#React 3D Carousel component
+# React 3D Carousel component
 3D carousel component in react.
 
 ### Demo 
@@ -6,13 +6,14 @@
 
 jsfiddle (https://jsfiddle.net/suhailsulu/8hnqaz2c/) 
 
-##Installation
-####npm 
+## Installation
+
+#### npm 
 
 ```
  npm i 3d-react-carousal
 ```
-####yarn
+#### yarn
 ```
  yarn add 3d-react-carousal
 ```
@@ -22,7 +23,7 @@ jsfiddle (https://jsfiddle.net/suhailsulu/8hnqaz2c/)
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 ```
 
-#####Importing the component
+##### Importing the component
 ```shell
 import {Carousel} from '3d-react-carousal';
 or 
@@ -42,7 +43,6 @@ let slides = [
 <Carousel slides={slides}/>
 
 ```
-###props 
+### props 
 <b>slides :-</b> Array of react components
 you can give any component in the slides like images, divs or even your custom components
-
