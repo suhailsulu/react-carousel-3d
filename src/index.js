@@ -67,94 +67,105 @@ export class Carousel extends React.Component {
     slideRight () {
         let {slideCurrent,slideTotal} = this.state;
         let preactiveSlide,proactiveSlide;
-        if (slideCurrent < slideTotal) {
-            slideCurrent++;
-        } else {
-            slideCurrent=0;
-        }
+        const activeClass = 'slider-single active';
         let slide = this.state.slides;
-        if (slideCurrent > 0) {
-            preactiveSlide = slide[slideCurrent - 1];
-        } else {
-            preactiveSlide = slide[slideTotal];
-        }
-        let activeSlide = slide[slideCurrent];
-        if (slideCurrent < slideTotal) {
-            proactiveSlide = slide[slideCurrent+1];
-        } else {
-            proactiveSlide = slide[0];
-
-        }
-
-        slide.forEach((slid,index)=> {
-            if (slid.class.includes("preactivede") ) {
-                slid.class ='slider-single proactivede';
+        if(slideTotal > 1){
+            if (slideCurrent < slideTotal) {
+                slideCurrent++;
+            } else {
+                slideCurrent=0;
             }
-            if (slid.class.includes("preactive")) {
-                slid.class = 'slider-single preactivede';
+            if (slideCurrent > 0) {
+                preactiveSlide = slide[slideCurrent - 1];
+            } else {
+                preactiveSlide = slide[slideTotal];
             }
-        });
+            let activeSlide = slide[slideCurrent];
+            if (slideCurrent < slideTotal) {
+                proactiveSlide = slide[slideCurrent+1];
+            } else {
+                proactiveSlide = slide[0];
 
-        preactiveSlide.class = 'slider-single preactive';
-        activeSlide.class = 'slider-single active';
-        proactiveSlide.class = 'slider-single proactive';
-        this.setState((prevState, props) => {
-          return {slides:slide,slideCurrent}
-        });
-        if(document.getElementsByClassName("slider-single active").length > 0) {
-            setTimeout(()=> {
-                let height = document.getElementsByClassName("slider-single active")[0].clientHeight;
-                this.setState((prevState, props) =>{
-                    return {height:height+"px"}
-                })
-            }, 500);
+            }
+
+            slide.forEach((slid,index)=> {
+                if (slid.class.includes("preactivede") ) {
+                    slid.class ='slider-single proactivede';
+                }
+                if (slid.class.includes("preactive")) {
+                    slid.class = 'slider-single preactivede';
+                }
+            });
+
+            preactiveSlide.class = 'slider-single preactive';
+            activeSlide.class = activeClass;
+            proactiveSlide.class = 'slider-single proactive';
+            this.setState((prevState, props) => {
+              return {slides:slide,slideCurrent}
+            });
+            if(document.getElementsByClassName("slider-single active").length > 0) {
+                setTimeout(()=> {
+                    let height = document.getElementsByClassName("slider-single active")[0].clientHeight;
+                    this.setState((prevState, props) =>{
+                        return {height:height+"px"}
+                    })
+                }, 500);
+            }
+        }else {
+            if(slide[0].class !== activeClass){
+                slide[0].class = activeClass;
+                this.setState((prevState, props) => {
+                  return {slides:slide, slideCurrent: 0}
+                });
+            }
         }
     }
     slideLeft () {
         let {slideCurrent,slideTotal} = this.state;
-        let preactiveSlide,proactiveSlide;
-        let slide = this.state.slides;
-        if (slideCurrent > 0) {
-            slideCurrent--;
-        } else {
-            slideCurrent = slideTotal;
-        }
-
-        if (slideCurrent < slideTotal) {
-            proactiveSlide = slide[slideCurrent + 1];
-        } else {
-            proactiveSlide = slide[0];
-        }
-        var activeSlide = slide[slideCurrent];
-        if (slideCurrent > 0) {
-            preactiveSlide = slide[slideCurrent - 1];
-        } else {
-            preactiveSlide = slide[slideTotal];
-        }
-        slide.forEach((slid,index)=> {
-            if (slid.class.includes("proactivede") ) {
-                slid.class ='slider-single preactivede';
+        if(slideTotal > 1){
+            let preactiveSlide,proactiveSlide;
+            let slide = this.state.slides;
+            if (slideCurrent > 0) {
+                slideCurrent--;
+            } else {
+                slideCurrent = slideTotal;
             }
-            if (slid.class.includes("proactive")) {
-                slid.class = 'slider-single proactivede';
+    
+            if (slideCurrent < slideTotal) {
+                proactiveSlide = slide[slideCurrent + 1];
+            } else {
+                proactiveSlide = slide[0];
             }
-        });
-        preactiveSlide.class ='slider-single preactive';
-        activeSlide.class = 'slider-single active';
-        proactiveSlide.class = 'slider-single proactive';
-        this.setState((prevState, props) => {
-          return {slides:slide,slideCurrent}
-        });
-        if(document.getElementsByClassName("slider-single active").length > 0) {
-            setTimeout(()=> {
-                let height = document.getElementsByClassName("slider-single active")[0].clientHeight;
-                this.setState((prevState, props) =>{
-                    return {height:height+"px"}
-                })
-            }, 500);
+            var activeSlide = slide[slideCurrent];
+            if (slideCurrent > 0) {
+                preactiveSlide = slide[slideCurrent - 1];
+            } else {
+                preactiveSlide = slide[slideTotal];
+            }
+            slide.forEach((slid,index)=> {
+                if (slid.class.includes("proactivede") ) {
+                    slid.class ='slider-single preactivede';
+                }
+                if (slid.class.includes("proactive")) {
+                    slid.class = 'slider-single proactivede';
+                }
+            });
+            preactiveSlide.class ='slider-single preactive';
+            activeSlide.class = 'slider-single active';
+            proactiveSlide.class = 'slider-single proactive';
+            this.setState((prevState, props) => {
+              return {slides:slide,slideCurrent}
+            });
+            if(document.getElementsByClassName("slider-single active").length > 0) {
+                setTimeout(()=> {
+                    let height = document.getElementsByClassName("slider-single active")[0].clientHeight;
+                    this.setState((prevState, props) =>{
+                        return {height:height+"px"}
+                    })
+                }, 500);
+            }
         }
     }
-
     render() {
         return (
         <div className="react-3d-carousel" style={{height:this.state.height}}>
