@@ -15,11 +15,6 @@
       transform: scale(1);
     }
   }
-  body {
-    color: #FFFFFF;
-    background-color: #27292d;
-    overflow: hidden;
-  }
   
   .slider-container {
     position: absolute;

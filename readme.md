@@ -40,9 +40,11 @@ let slides = [
 .
 .
 .
-<Carousel slides={slides}/>
+<Carousel slides={slides} autoplay={true} interval={1000}/>
 
 ```
 ### props 
 <b>slides :-</b> Array of react components
+<b>autoplay :-</b> Boolean (true or false) - optional
+<b>interval :-</b> number (time in milliseconds) - optional
 you can give any component in the slides like images, divs or even your custom components

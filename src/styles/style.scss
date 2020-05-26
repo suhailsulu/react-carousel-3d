@@ -18,11 +18,6 @@ $mode: cubic-bezier(.17, .67, .55, 1.43);
     transform: scale(1)
   }
 }
-body {
-  color: #FFFFFF;
-  background-color: #27292d;
-//   overflow: hidden;
-}
 .react-3d-carousel {
     position: relative;
     // height: 600px;
@@ -50,6 +45,12 @@ body {
             // height: 100%;
             transition: z-index 0ms $delay;
             .slider-single-content {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-pack:center;
+              -ms-flex-pack:center;
+              justify-content:center;
               position: relative;
               left: 0;
               top: 0;
