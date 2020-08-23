@@ -74,6 +74,14 @@ export class Carousel extends React.Component {
                 }, 500);
             }
         }
+        if (this.props.autoplay !== prevProps.autoplay) {
+            clearTimeout(this.interval);
+            if (this.props.autoplay) {
+              this.interval = setTimeout(() => {
+                this.slideRight();
+              }, this.props.interval);
+            }
+        }
     }
 
     slideRight() {
