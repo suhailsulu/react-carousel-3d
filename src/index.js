@@ -191,7 +191,19 @@ export class Carousel extends React.Component {
                 }, 500);
             }
         }
+
     }
+
+    sliderClass(direction) {
+        let sliderClass = `slider-${direction}`;
+        if (!this.props.arrows) {
+            sliderClass = "slider-disabled"
+        } else if (this.props.arrows && !this.props.arrowBorders) {
+            sliderClass = `slider-${direction}-noborders`;
+        }
+        return sliderClass
+        }
+
     render() {
         return (
             <div className="react-3d-carousel" style={{ height: this.state.height }}>
@@ -202,12 +214,12 @@ export class Carousel extends React.Component {
                             {this.state.slides.map((slider, index) => {
                                 return (
                                     <div className={slider.class} key={index}>
-                                        <div className={this.props.arrows ? this.props.arrowBorders ? "slider-left" : "slider-left-noborders" : "slider-disabled"} onClick={this.slideLeft.bind(this)}>
+                                        <div className={this.sliderClass("left")} onClick={this.slideLeft.bind(this)}>
                                             <div>
                                                 <i className="fa fa-arrow-left"></i>
                                             </div>
                                         </div>
-                                        <div className={this.props.arrows ? this.props.arrowBorders ? "slider-right" : "slider-right-noborders" : "slider-disabled"} onClick={this.slideRight.bind(this)}>
+                                        <div className={this.sliderClass("right")} onClick={this.slideRight.bind(this)}>
                                             <div >
                                                 <i className="fa fa-arrow-right"></i>
                                             </div>
