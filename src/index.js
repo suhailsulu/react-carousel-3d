@@ -202,12 +202,12 @@ export class Carousel extends React.Component {
                             {this.state.slides.map((slider, index) => {
                                 return (
                                     <div className={slider.class} key={index}>
-                                        <div className="slider-left" onClick={this.slideLeft.bind(this)}>
+                                        <div className={this.props.arrows ? this.props.arrowBorders ? "slider-left" : "slider-left-noborders" : "slider-disabled"} onClick={this.slideLeft.bind(this)}>
                                             <div>
                                                 <i className="fa fa-arrow-left"></i>
                                             </div>
                                         </div>
-                                        <div className="slider-right" onClick={this.slideRight.bind(this)}>
+                                        <div className={this.props.arrows ? this.props.arrowBorders ? "slider-right" : "slider-right-noborders" : "slider-disabled"} onClick={this.slideRight.bind(this)}>
                                             <div >
                                                 <i className="fa fa-arrow-right"></i>
                                             </div>
@@ -231,9 +231,13 @@ export class Carousel extends React.Component {
 Carousel.propTypes = {
     slides: PropTypes.arrayOf(PropTypes.element),
     autoplay: PropTypes.bool,
-    interval: PropTypes.number
+    interval: PropTypes.number,
+    arrows: PropTypes.bool,
+    arrowBorders: PropTypes.bool,
 };
 Carousel.defaultProps = {
     autoplay: false,
-    interval: 3000
+    interval: 3000,
+    arrows: true, 
+    arrowBorders: true,
 };

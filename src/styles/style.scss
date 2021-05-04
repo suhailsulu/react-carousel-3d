@@ -153,5 +153,46 @@ $mode: cubic-bezier(.17, .67, .55, 1.43);
           }
           margin-left: -2px;
         }
+        .slider-left-noborders {
+          position: absolute;
+          display: none;
+          z-index: 3;
+          right: 101%;
+          margin-right: 5px;
+          padding: 20px 15px;
+          height: 100%;
+          cursor: pointer;
+          div{
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            margin-top:-20px;
+            color: #ffffff;
+            transform: translateY(-50%);
+            padding: 10px 10px;
+          }
+        }
+        .slider-right-noborders {
+          display: none;
+          position: absolute;
+          z-index: 3;
+          left: 101%;
+          padding: 20px 15px;
+          height: 101%;
+          cursor: pointer;
+          div {
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            margin-top:-20px;
+            color: #ffffff;
+            transform: translateY(-50%);
+            padding: 10px 10px;
+          }
+          margin-left: -2px;
+        }
+        .slider-disabled {
+          display: none
+        }
     }
 }
