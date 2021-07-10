@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import PropTypes from 'prop-types';
 import './styles/style.scss';
 
@@ -10,7 +11,12 @@ function Carousel(props) {
   const [slides, setSlides] = useState([]);
   const [height, setHeight] = useState('0px');
   const intervalRef = useRef();
-
+  const handlers = useSwipeable({
+    onSwipedLeft: () => slideRight(),
+    onSwipedRight: () => slideLeft(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  });
   useEffect(() => {
     //console.log("slides change");
     const locSlides = [];
@@ -105,7 +111,7 @@ function Carousel(props) {
       setSlideCurrent(0);
     }
   };
-  const slideLeft = useCallback(() => {
+  const slideLeft = () => {
     if (slideTotal > 1) {
       let preactiveSlide;
       let proactiveSlide;
@@ -150,7 +156,7 @@ function Carousel(props) {
         }, 500);
       }
     }
-  },[slideCurrent,slideTotal,slides]);
+  };
 
   const sliderClass = (direction) => {
     let sliderClass = `slider-${direction}`;
@@ -163,9 +169,9 @@ function Carousel(props) {
   };
 
   return (
-    <div className="react-3d-carousel" style={{ height }}>
+    <div className="react-3d-carousel" style={{ height }} {...handlers}>
           {slides && slides.length > 0
-                && <div className="slider-container">
+                && <div className="slider-container" >
 
                   <div className="slider-content">
                       {slides.map((slider, index) => (
