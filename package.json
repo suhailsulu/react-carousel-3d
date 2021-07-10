@@ -1,20 +1,23 @@
 {
   "name": "3d-react-carousal",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "3D carousel in react",
   "main": "dist/index.js",
   "peerDependencies": {
-    "react": "^16.7.0",
-    "react-dom": ">=16.13.1"
+    "react": "^17.0.2",
+    "react-dom": ">=17.0.2"
   },
   "dependencies": {
-    "react-fast-compare": "^3.0.2"
+    "prop-types": "^15.7.2",
+    "react-fast-compare": "^3.2.0",
+    "react-swipeable": "^6.1.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
     "prepublish": "if exist dist ( rmdir /s/q dist ) && npm run build",
-    "build": "webpack"
+    "build": "webpack",
+    "lint": "eslint src/index.js"
   },
   "author": "Suhail C <mr.suhailsulu@gmail.com>",
   "repository": {
@@ -22,20 +25,26 @@
     "url": "git+https://github.com/suhailsulu/react-carousel-3d.git"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
-    "@babel/plugin-transform-react-jsx": "^7.9.4",
-    "@babel/preset-env": "^7.9.6",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.5.3",
-    "node-sass": "^4.9.3",
-    "react": ">=16.7.0",
-    "react-dom": ">=16.13.1",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.2.1",
-    "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.11"
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+    "@babel/plugin-transform-react-jsx": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "node-sass": "^6.0.1",
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.0.0",
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2"
   },
   "bugs": {
     "url": "https://github.com/suhailsulu/react-carousel-3d/issues"

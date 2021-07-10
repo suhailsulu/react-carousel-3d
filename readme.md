@@ -1,5 +1,5 @@
 # React 3D Carousel component
-3D carousel component in react.
+3D carousel component in react (with swipe support).
 
 ### Demo 
 ![Demo](https://i.imgur.com/aa2QTOx.gif)
@@ -25,9 +25,7 @@ jsfiddle (https://jsfiddle.net/suhailsulu/8hnqaz2c/)
 
 ##### Importing the component
 ```shell
-import {Carousel} from '3d-react-carousal';
-or 
-var Carousel = require( '3d-react-carousal').Carousel;
+import Carousel from '3d-react-carousal';
 .
 .
 .
@@ -47,4 +45,5 @@ let slides = [
 <b>slides :-</b> Array of react components  
 <b>autoplay :-</b> Boolean (true or false) - optional  
 <b>interval :-</b> number (time in milliseconds) - optional  
+<b>arrows :-</b> Boolean (true or false) - optional  
 You can give any component in the slides like images, divs or even your custom components
