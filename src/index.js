@@ -5,7 +5,7 @@ import './styles/style.scss';
 
 // const isEqual = require("react-fast-compare");
 
-function Carousel(props) {
+export function Carousel(props) {
   const [slideTotal, setSlideTotal] = useState(0);
   const [slideCurrent, setSlideCurrent] = useState(-1);
   const [slides, setSlides] = useState([]);
@@ -212,4 +212,4 @@ Carousel.defaultProps = {
   arrowBorders: true,
 };
 
-export default Carousel;
+
