@@ -18,9 +18,8 @@ export function Carousel(props) {
     trackMouse: true
   });
   useEffect(() => {
-    //console.log("slides change");
     const locSlides = [];
-    console.log(props.slides);
+    //console.log(props.slides);
     props.slides.forEach((slide) => {
       const slideobject = {
         class: 'slider-single proactivede',
@@ -28,10 +27,19 @@ export function Carousel(props) {
       };
       locSlides.push(slideobject);
     });
+    if(props.slides.length === 2){
+      props.slides.forEach((slide) => {
+        const slideobject = {
+          class: 'slider-single proactivede',
+          element: slide,
+        };
+        locSlides.push(slideobject);
+      });
+    }
     setSlides(locSlides);
-    setSlideTotal(props.slides.length - 1);
+    setSlideTotal(locSlides.length - 1);
     setSlideCurrent(-1);
-    console.log(slideCurrent);
+    //console.log(slideCurrent);
     if (slideCurrent === -1) {
       setTimeout(() => {
         slideRight();
