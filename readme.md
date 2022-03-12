@@ -38,7 +38,13 @@ let slides = [
 .
 .
 .
-<Carousel slides={slides} autoplay={true} interval={1000}/>
+.
+const callback = function(index){
+    console.log("callback",index);
+}
+.
+.
+<Carousel slides={slides} autoplay={true} interval={1000} onSlideChange={callback}/>
 
 ```
 ### props 
@@ -46,4 +52,5 @@ let slides = [
 <b>autoplay :-</b> Boolean (true or false) - optional  
 <b>interval :-</b> number (time in milliseconds) - optional  
 <b>arrows :-</b> Boolean (true or false) - optional  
+<b>onSlideChange :-</b> callback function with index of the slide as argument - optional  
 You can give any component in the slides like images, divs or even your custom components

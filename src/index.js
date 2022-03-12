@@ -10,7 +10,8 @@ export function Carousel(props) {
   const [slideCurrent, setSlideCurrent] = useState(-1);
   const [slides, setSlides] = useState([]);
   const [height, setHeight] = useState('0px');
-  const intervalRef = useRef();
+  const intervalRef = useRef(null);
+  const nextRef = useRef();
   const handlers = useSwipeable({
     onSwipedLeft: () => slideRight(),
     onSwipedRight: () => slideLeft(),
@@ -39,21 +40,22 @@ export function Carousel(props) {
     setSlides(locSlides);
     setSlideTotal(locSlides.length - 1);
     setSlideCurrent(-1);
-    //console.log(slideCurrent);
     if (slideCurrent === -1) {
+      console.log("2");
       setTimeout(() => {
-        slideRight();
+        nextRef.current.click();
         if (props.autoplay) {
-          intervalRef.interval = setTimeout(() => {
-          slideRight();
+          intervalRef.current = setTimeout(() => {
+            nextRef.current.click();
         }, props.interval);}
       }, 500);
     }
   }, [props.slides]);
   useEffect(()=>{
     if(slideCurrent === -1){
+      console.log("1");
       setTimeout(() => {
-        slideRight();
+        //slideRight();
       }, 500);
     }
   },[slides,slideCurrent]);
@@ -85,6 +87,7 @@ export function Carousel(props) {
       }
 
       slide.forEach((slid, index) => {
+        //console.log(slid);
         if (slid.class.includes('preactivede')) {
           slid.class = 'slider-single proactivede';
         }
@@ -107,10 +110,11 @@ export function Carousel(props) {
           }
         }, 500);
       }
+      props.onSlideChange(slideCurrentLoc);
       if (props.autoplay) {
-        clearTimeout(intervalRef.interval);
-        intervalRef.interval = setTimeout(() => {
-          slideRight();
+        clearTimeout(intervalRef.current);
+        intervalRef.current = setTimeout(() => {
+          nextRef.current.click();
         }, props.interval);
       }
     } else if (slide[0] && slide[0].class !== activeClass) {
@@ -155,6 +159,7 @@ export function Carousel(props) {
       proactiveSlide.class = 'slider-single proactive';
       setSlides(slide);
       setSlideCurrent(slideCurrentLoc);
+      props.onSlideChange(slideCurrentLoc);
       if (document.getElementsByClassName('slider-single active').length > 0) {
         setTimeout(() => {
           if (document.getElementsByClassName('slider-single active').length > 0) {
@@ -189,7 +194,7 @@ export function Carousel(props) {
                                             <i className="fa fa-arrow-left"></i>
                                         </div>
                                     </div>
-                                    <div className={sliderClass('right')} onClick={slideRight}>
+                                    <div className={sliderClass('right')} onClick={slideRight} ref={nextRef}>
                                         <div >
                                             <i className="fa fa-arrow-right"></i>
                                         </div>
@@ -212,12 +217,16 @@ Carousel.propTypes = {
   interval: PropTypes.number,
   arrows: PropTypes.bool,
   arrowBorders: PropTypes.bool,
+  onSlideChange:PropTypes.func
 };
 Carousel.defaultProps = {
   autoplay: false,
   interval: 3000,
   arrows: true,
   arrowBorders: true,
+  onSlideChange:function(){
+
+  }
 };
 
 
