@@ -20,7 +20,6 @@ export function Carousel(props) {
   });
   useEffect(() => {
     const locSlides = [];
-    //console.log(props.slides);
     props.slides.forEach((slide) => {
       const slideobject = {
         class: 'slider-single proactivede',
@@ -41,7 +40,6 @@ export function Carousel(props) {
     setSlideTotal(locSlides.length - 1);
     setSlideCurrent(-1);
     if (slideCurrent === -1) {
-      console.log("2");
       setTimeout(() => {
         nextRef.current.click();
         if (props.autoplay) {
@@ -53,7 +51,6 @@ export function Carousel(props) {
   }, [props.slides]);
   useEffect(()=>{
     if(slideCurrent === -1){
-      console.log("1");
       setTimeout(() => {
         //slideRight();
       }, 500);
@@ -87,7 +84,6 @@ export function Carousel(props) {
       }
 
       slide.forEach((slid, index) => {
-        //console.log(slid);
         if (slid.class.includes('preactivede')) {
           slid.class = 'slider-single proactivede';
         }
